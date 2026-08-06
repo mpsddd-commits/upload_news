@@ -1,0 +1,14 @@
+[project]
+name = "shorts-bot"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.120.2",
+    "edge-tts>=7.2.8",
+    "feedparser>=6.0.14",
+    "google-api-python-client>=2.198.0",
+    "google-auth>=2.56.2",
+    "google-auth-oauthlib>=1.4.0",
+    "google-genai>=2.17.0",
+    "pyyaml>=6.0.3",
+]

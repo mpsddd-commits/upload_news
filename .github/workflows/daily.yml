@@ -1,0 +1,169 @@
+name: daily-shorts-draft
+
+# ─────────────────────────────────────────────────────────────
+# 매일 뉴스 숏츠 "초안"을 만들어 유튜브에 비공개로 올려두는 워크플로.
+# 공개 전환은 사람이 유튜브 스튜디오에서 직접 합니다.
+# ─────────────────────────────────────────────────────────────
+
+on:
+  schedule:
+    # cron은 항상 UTC 기준입니다. 21:00 UTC = 익일 06:00 KST
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: '생성할 숏츠 개수'
+        required: false
+        default: '5'
+      dry_run:
+        description: '업로드 없이 렌더링까지만 (아티팩트로 확인)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # state/posted.json 커밋용
+  issues: write     # 검수 체크리스트 Issue 생성용
+
+# 이전 실행이 아직 돌고 있으면 겹쳐 돌지 않게 (중복 업로드 방지)
+concurrency:
+  group: daily-shorts
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Seoul
+  COUNT: ${{ inputs.count || '5' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 시크릿 사전 점검
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: |
+          missing=""
+          for k in YT_CLIENT_ID YT_CLIENT_SECRET YT_REFRESH_TOKEN; do
+            [ -z "${!k}" ] && missing="$missing $k"
+          done
+          # 대본 제공자는 config.yml 에서 고른다. 여기서는 둘 중 하나라도 있는지만 본다.
+          # 설정과 실제로 맞는 키인지는 script_gen.py 가 한국어로 알려준다.
+          if [ -z "$GEMINI_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            missing="$missing GEMINI_API_KEY|ANTHROPIC_API_KEY"
+          fi
+          if [ -n "$missing" ]; then
+            echo "::error::누락된 시크릿:$missing"
+            exit 1
+          fi
+          echo "시크릿 확인 완료"
+
+      - name: uv 설정
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: uv.lock
+
+      - name: 시스템 의존성 (ffmpeg + 한글 폰트)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-nanum fonts-nanum-extra
+          fc-cache -f
+          ffmpeg -version | head -n1
+
+      - name: 파이썬 의존성 동기화
+        run: uv sync --locked
+
+      # ── 1) 뉴스 수집 ────────────────────────────────────
+      - name: 뉴스 수집
+        run: uv run python -m src.collect --count "$COUNT"
+
+      # ── 2) 대본 생성 ────────────────────────────────────
+      - name: 대본 생성
+        env:
+          # 둘 다 주입해 두고, 실제로 쓸 쪽은 config.yml 의 script_gen.provider 가 정한다.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: uv run python -m src.script_gen
+
+      # ── 3) TTS ────────────────────────────────────────
+      - name: 음성 합성
+        run: uv run python -m src.tts
+
+      # ── 4) 렌더링 ──────────────────────────────────────
+      - name: 영상 렌더링
+        run: uv run python -m src.render
+
+      - name: 렌더 결과 요약
+        run: |
+          echo "### 렌더링 완료" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          for f in out/video/*.mp4; do
+            [ -e "$f" ] || continue
+            size=$(du -h "$f" | cut -f1)
+            dur=$(ffprobe -v error -show_entries format=duration \
+                  -of default=nw=1:nk=1 "$f" | cut -d. -f1)
+            echo "- \`$(basename "$f")\` — ${dur}초, ${size}" >> "$GITHUB_STEP_SUMMARY"
+          done
+
+      # dry_run이든 아니든 항상 보관 (문제 생겼을 때 바로 받아볼 수 있게)
+      - name: 영상 아티팩트 업로드
+        uses: actions/upload-artifact@v4
+        with:
+          name: shorts-${{ github.run_number }}
+          path: |
+            out/video/*.mp4
+            out/scripts.json
+          retention-days: 7
+          if-no-files-found: error
+
+      # ── 5) 유튜브 비공개 업로드 ─────────────────────────
+      - name: 유튜브 업로드 (privacyStatus=private)
+        if: ${{ !inputs.dry_run }}
+        env:
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+        run: uv run python -m src.upload
+
+      # ── 6) 검수 요청 Issue ──────────────────────────────
+      - name: 검수 체크리스트 Issue 생성
+        if: ${{ !inputs.dry_run }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: uv run python -m src.notify
+
+      # ── 7) 업로드 이력 커밋 (중복 방지) ──────────────────
+      - name: 상태 파일 커밋
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name  "shorts-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/posted.json
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "chore: 업로드 기록 $(date +%F)"
+            git push
+          fi
+
+      # ── 실패 알림 ──────────────────────────────────────
+      - name: 실패 시 Issue 생성
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "파이프라인 실패 — $(date +%F)" \
+            --label "bug,automation" \
+            --body "run #${{ github.run_number }} 실패했습니다.
+
+          로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

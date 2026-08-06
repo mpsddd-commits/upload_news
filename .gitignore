@@ -1,0 +1,29 @@
+# 가상환경 — uv sync 로 언제든 재생성된다. 절대 커밋 금지
+.venv/
+__pycache__/
+*.py[cod]
+
+# 인증 정보 — 유출되면 채널을 통째로 잃는다
+client_secret.json
+client_secret*.json
+token.json
+.env
+.env.*
+!.env.example
+
+# 산출물 — 매 실행마다 새로 만들어진다 (state/posted.json 만 커밋 대상)
+out/
+
+# 렌더링 리소스 실물은 커밋하지 않고 .gitkeep 만 남긴다
+assets/fonts/*
+assets/bg/*
+assets/bgm/*
+!assets/fonts/.gitkeep
+!assets/bg/.gitkeep
+!assets/bgm/.gitkeep
+
+# 에디터·OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
