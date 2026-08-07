@@ -68,11 +68,11 @@ src/
   __init__.py                 빈 파일. python -m 을 위해 필수
   yt_auth.py                  유튜브 OAuth 공용        (완료)
   upload.py                   비공개 업로드            (완료)
-  collect.py                  1) RSS 수집
-  script_gen.py               2) 대본 생성
-  tts.py                      3) 음성 합성
-  render.py                   4) 영상 렌더링
-  notify.py                   6) 검수 이슈 생성
+  collect.py                  1) RSS 수집              (완료)
+  script_gen.py               2) 대본 생성              (완료)
+  tts.py                      3) 음성 합성              (완료)
+  render.py                   4) 영상 렌더링            (완료)
+  notify.py                   6) 검수 이슈 생성          (미구현)
 scripts/
   get_refresh_token.py        로컬 1회 실행            (완료)
   check_auth.py               로컬 검증                (완료)
@@ -219,6 +219,26 @@ Anthropic API에는 무료 티어가 없다. 선불 크레딧 종량제다.
 - **썸네일 403** → 채널 전화 인증 미완료. 실패해도 파이프라인을 죽이지 말 것
 - **커스텀 썸네일 없이도 동작해야 함** → `thumbnail_path` 는 선택 필드
 
+아래는 실제로 부딪혀서 해결한 것들이다. 같은 자리를 다시 파지 말 것.
+
+- **자막 줄 사이가 한 줄씩 벌어짐 (윈도우에서만)** → `Path.write_text()` 가 윈도우에서
+  `\n` 을 `\r\n` 으로 바꿔 쓰고, `drawtext` 가 `\r` 을 빈 줄로 그린다.
+  자막 파일을 쓸 때 `newline="\n"` 을 반드시 지정한다. **리눅스에서는 재현되지 않아
+  로컬과 운영이 다르게 보인다.**
+- **ffmpeg 필터가 `No option name near ...` 로 실패** → 필터 인자에 든 경로의 콜론
+  (`C:/...`) 이 옵션 구분자로 먹힌 것. 필터 파서는 백슬래시를 두 번 처리해서
+  이스케이프 규칙이 플랫폼마다 다르게 깨진다. **경로에서 콜론을 없애는 쪽이 확실하다** —
+  `render.py` 는 폰트를 `out/tmp/` 로 복사하고 리포 루트 기준 상대경로로 넘긴다
+  (`cwd=ROOT` 로 실행). 자막도 같은 이유로 `textfile=` 상대경로를 쓴다.
+- **자막 특수문자로 렌더가 통째로 실패** → 뉴스 제목에는 `:` `'` `"` `%` `,` `[` 가 흔하다.
+  `drawtext` 의 `text=` 대신 **`textfile=`** 로 넘기고 `expansion=none` 을 준다.
+  이러면 `%{pts}` 같은 표현식도 그대로 출력된다.
+- **`text_align=MC` 파싱 오류** → flags 타입이라 값은 `+` 로 잇는다. `text_align=M+C`
+- **dry_run 인데 시크릿 누락으로 즉시 실패** → 사전 점검이 유튜브 시크릿을 무조건 요구하면,
+  업로드하지도 않는 dry_run 이 시작조차 못 한다. 유튜브 검사는 `dry_run != true` 일 때만.
+- **실패 알림 단계가 같이 실패** → `gh issue create --label` 에 리포에 없는 라벨을 지정하면
+  gh 가 실패한다. 원인을 알려줄 단계가 죽으면 로그를 뒤져야 한다. 라벨을 붙이지 않는다.
+
 ---
 
 ## 9. 테스트 방법
@@ -228,7 +248,7 @@ Anthropic API에는 무료 티어가 없다. 선불 크레딧 종량제다.
 ```bash
 # 1) 렌더링까지만 (업로드·커밋·이슈 생성 건너뜀)
 uv run python -m src.collect --count 5
-uv run python -m src.script_gen
+uv run python -m src.script_gen      # GEMINI_API_KEY 필요
 uv run python -m src.tts
 uv run python -m src.render
 
@@ -238,7 +258,19 @@ ffprobe -v error -show_entries stream=width,height -show_entries format=duration
         -of default=nw=1 out/video/*.mp4
 ```
 
+**윈도우에서 로컬 실행할 때는 두 가지를 먼저 설정한다.**
+
+```powershell
+$env:PYTHONIOENCODING = "utf-8"   # 없으면 한국어 출력이 cp949 로 죽는다
+$env:GEMINI_API_KEY   = "..."     # GitHub Secrets 는 Actions 안에서만 보인다
+```
+
+`ffmpeg` / `ffprobe` 가 PATH 에 있어야 Task 4·5 가 돈다. 폰트는 설정값이 없으면
+OS 별 후보(윈도우 맑은고딕 등)로 자동 대체되고 경고를 남긴다. 운영은 나눔고딕을 쓴다.
+
 Actions에서는 `workflow_dispatch` 의 `dry_run` 체크박스를 켜면 같은 범위까지만 돈다.
+**dry_run 은 유튜브 시크릿이 없어도 돈다** (Task 1 전에도 대본·음성·영상 검증 가능).
+결과 mp4 는 아티팩트로 받아 볼 수 있다.
 
 인증 검증:
 
@@ -249,14 +281,27 @@ uv run python scripts/check_auth.py   # 1유닛만 소모
 
 ---
 
-## 10. 아직 정해지지 않은 것
+## 10. 확정된 결정 (2026-08-06)
 
-작업 시작 전 사용자에게 확인할 것. 임의로 정하지 말 것.
+초안의 "아직 정해지지 않은 것" 4가지는 모두 결정됐고 `config.yml` 에 반영돼 있다.
+**바꾸려면 사용자에게 먼저 확인할 것.** 임의로 바꾸지 않는다.
 
-- **채널 주제** — 종합 뉴스인지, 특정 분야(반도체/AI, 부동산, 국제 등)로 좁힐지.
-  좁힐수록 YPP 심사에 유리하다
-- **"상위 5개" 판정 기준** — 다매체 동시 보도(화제성) / 최신순 / 키워드 매칭
-- **TTS 음성** — `edge-tts` 무료 한국어 음성 vs 유료 TTS
-- **영상 스타일** — 단색 배경 + 자막인지, 배경 이미지를 쓸지
+| 항목 | 결정 | 위치 |
+|---|---|---|
+| 채널 주제 | **경제·부동산·금융** | `channel.topic` |
+| "상위 5개" 판정 | **cluster** (다매체 동시 보도) | `collect.ranking` |
+| TTS 음성 | **ko-KR-SunHiNeural** (edge-tts 무료) | `tts.voice` |
+| 영상 스타일 | **그라데이션 배경 + 자막** | `render.background` |
+| 대본 생성 | **Gemini 무료 티어**, provider 교체 가능 | `script_gen.provider` |
 
-`config.yml` 은 이 결정들이 나온 뒤에 작성한다.
+주제가 경제·금융이라 **숫자 정확도가 다른 무엇보다 중요하다.** 금리·시세·지수·날짜를
+잘못 읽으면 검수에서 전부 걸러내야 한다. `script_gen.py` 의 시스템 프롬프트는
+"요약문에 없는 수치는 만들어내지 말고, 불확실하면 아예 언급하지 말 것"을 명시하고 있다.
+이 문장을 지우지 말 것.
+
+### 아직 정하지 않은 것
+
+- **배경 이미지 사용 여부** — `render.background: image` 로 바꾸고 `assets/bg/` 에
+  이미지를 넣으면 동작한다. 단 출처가 불분명한 이미지는 2장 저작권 금지에 걸린다
+- **BGM** — `assets/bgm/` 은 비어 있고 렌더 파이프라인도 아직 오디오를 믹싱하지 않는다
+- **썸네일** — `thumbnail_path` 는 선택 필드고 생성 단계가 없다. 없어도 업로드는 된다

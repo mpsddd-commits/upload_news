@@ -7,6 +7,37 @@ Claude Code에게 한 번에 하나씩 지시한다. 예: **"TASKS.md의 Task 2�
 
 ---
 
+## 진행 현황 (2026-08-06 기준)
+
+| Task | 상태 | 비고 |
+|---|---|---|
+| 0 스캐폴딩 | **완료** | 수용 기준 2종 통과 |
+| 1 GCP 인증 | **미착수** | 사람이 콘솔에서 수행. 유튜브 업로드의 유일한 선행 조건 |
+| 2 `config.yml` + `collect.py` | **완료** | 수용 기준 통과 |
+| 3 `script_gen.py` | **구현 완료 / 실호출 미검증** | 파싱·검증·재시도는 검증됨. 실제 Gemini 호출은 아직 |
+| 4 `tts.py` | **완료** | 수용 기준 통과 |
+| 5 `render.py` | **완료** | 수용 기준 + 한글 자막 육안 확인까지 통과 |
+| 6 `notify.py` | **미착수** | 다음 작업 |
+| 7 통합 점검 | 미착수 | |
+
+### 내일 바로 할 것
+
+1. **`daily.yml` 미커밋 변경분을 푸시한다.** dry_run 이 유튜브 시크릿 없이도
+   돌도록 사전 점검을 고친 것과, 실패 알림의 라벨 지정을 뺀 것 두 가지다.
+   푸시 전에는 dry_run 이 시크릿 누락으로 즉시 실패한다.
+2. **Actions → `daily-shorts-draft` → Run workflow → `dry_run` 체크, `count`는 2.**
+   여기서 Task 3 의 실제 Gemini 호출이 검증된다. 결과 mp4 는 아티팩트로 받는다.
+3. 그 다음 **Task 6 (`notify.py`)** 를 구현한다.
+
+### 막혀 있는 것
+
+- **Task 1 (GCP)** — 사람이 콘솔에서 해야 한다. 이게 끝나야 Task 7 의 실제 업로드가 가능하다.
+  dry_run 범위(수집~렌더)는 Task 1 없이도 검증된다.
+- **로컬에서 Task 3 검증** — GitHub Secrets 는 Actions 안에서만 보인다.
+  로컬에서 돌리려면 셸에 `$env:GEMINI_API_KEY` 를 따로 설정해야 한다.
+
+---
+
 ## Task 0 — 스캐폴딩 (사람이 먼저 수행)
 
 이미 받은 파일들을 배치하고 프로젝트를 초기화한다.
@@ -127,9 +158,15 @@ print('통과', len(a))
 
 `out/articles.json` 을 읽어 Anthropic API로 대본을 만들고 `out/scripts.json` 을 쓴다.
 
-- SDK: `from anthropic import Anthropic` / 모델 `claude-sonnet-5`
+- 제공자는 `config.yml` 의 `script_gen.provider` 로 고른다. **기본값은 `gemini`** (무료 티어).
+  (초안은 Anthropic 전용이었으나, 비용 0원으로 시작하되 언제든 갈아끼울 수 있게 바꿨다)
+  - `gemini`    — `from google import genai` / 모델 `gemini-2.5-flash` / `GEMINI_API_KEY`
+  - `anthropic` — `from anthropic import Anthropic` / 모델 `claude-sonnet-5` / `ANTHROPIC_API_KEY`
 - **기사 요약문을 그대로 옮기지 말고 자기 문장으로 다시 쓰도록** 프롬프트에 명시.
-  이건 저작권 요건이다
+  이건 저작권 요건이다. 생성 후 원문과의 유사도까지 검사하고, `script_gen.max_similarity`
+  (기본 0.80) 이상이면 다시 생성한다. 조사만 바꾼 표절은 문자열 비교로는 안 잡힌다
+- **요약문에 없는 수치·인명·날짜를 만들어내지 못하게** 프롬프트에 명시.
+  경제·금융 채널이라 숫자 하나가 틀리면 치명적이다
 - 숏츠 분량: 한국어 기준 **45초 내외, 약 300~330자**
   (초안의 "200~250자"는 실측과 맞지 않아 정정. ko-KR-SunHiNeural + `rate "+10%"` 의
   발화 속도가 **7.46자/초** 라 200~250자는 27~34초에 그치고, Task 4의 "각 30~60초"
@@ -199,7 +236,10 @@ print('통과')
 - 사양: 1080x1920, H.264 (`libx264`), `yuv420p`, AAC 오디오, 30fps
 - 자막은 `captions` 를 음성 길이에 비례 분할해 순차 표시.
   `drawtext` 필터 + `fontfile=/usr/share/fonts/truetype/nanum/NanumGothic.ttf`
-- 자막 텍스트는 특수문자 이스케이프 필수 (`:`, `'`, `%`, `\`)
+- 자막 텍스트의 특수문자(`:` `'` `"` `%` `\` `,` `[`) 처리 필수.
+  **이스케이프하지 말고 회피한다** — `text=` 대신 `textfile=` 로 파일에서 읽고
+  `expansion=none` 을 준다. 필터 파서가 백슬래시를 두 번 처리해서 이스케이프 규칙이
+  플랫폼마다 다르게 깨지는데, 뉴스 제목엔 이 문자들이 흔해 한 건만 걸려도 렌더가 통째로 죽는다
 - 배경은 `config.yml` 설정에 따라 단색 또는 `assets/bg/` 이미지
 - 상하단에 안전 여백. 숏츠 UI가 하단 20% 정도를 가린다
 - 렌더 실패한 건은 건너뛰고 나머지 계속

@@ -49,15 +49,23 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
           missing=""
-          for k in YT_CLIENT_ID YT_CLIENT_SECRET YT_REFRESH_TOKEN; do
-            [ -z "${!k}" ] && missing="$missing $k"
-          done
-          # 대본 제공자는 config.yml 에서 고른다. 여기서는 둘 중 하나라도 있는지만 본다.
-          # 설정과 실제로 맞는 키인지는 script_gen.py 가 한국어로 알려준다.
+          # 대본 생성은 dry_run 에서도 돈다. 제공자 키는 항상 필요하다.
+          # 어느 쪽을 쓸지는 config.yml 의 script_gen.provider 가 정하고,
+          # 설정과 맞는 키인지는 script_gen.py 가 한국어로 알려준다.
           if [ -z "$GEMINI_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
             missing="$missing GEMINI_API_KEY|ANTHROPIC_API_KEY"
+          fi
+          # 유튜브 자격증명은 실제로 업로드할 때만 필요하다.
+          # dry_run 은 렌더링까지만 도는데 여기서 막으면 확인조차 못 한다.
+          if [ "$DRY_RUN" != "true" ]; then
+            for k in YT_CLIENT_ID YT_CLIENT_SECRET YT_REFRESH_TOKEN; do
+              [ -z "${!k}" ] && missing="$missing $k"
+            done
+          else
+            echo "dry_run 이므로 유튜브 시크릿 검사는 건너뜁니다"
           fi
           if [ -n "$missing" ]; then
             echo "::error::누락된 시크릿:$missing"
@@ -161,9 +169,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # 라벨은 붙이지 않는다. 리포에 없는 라벨을 지정하면 gh 가 실패하는데,
+          # 그러면 "실패를 알리는 단계"가 실패해서 원인이 묻힌다.
           gh issue create \
             --title "파이프라인 실패 — $(date +%F)" \
-            --label "bug,automation" \
             --body "run #${{ github.run_number }} 실패했습니다.
 
           로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
