@@ -17,17 +17,20 @@ Claude Code에게 한 번에 하나씩 지시한다. 예: **"TASKS.md의 Task 2�
 | 3 `script_gen.py` | **구현 완료 / 실호출 미검증** | 파싱·검증·재시도는 검증됨. 실제 Gemini 호출은 아직 |
 | 4 `tts.py` | **완료** | 수용 기준 통과 |
 | 5 `render.py` | **완료** | 수용 기준 + 한글 자막 육안 확인까지 통과 |
-| 6 `notify.py` | **미착수** | 다음 작업 |
+| 6 `notify.py` | **구현 완료 / 실호출 미검증** | 본문·리포해석·오류경로는 검증됨. 실제 Issue 생성은 아직 |
 | 7 통합 점검 | 미착수 | |
 
-### 내일 바로 할 것
+### 다음에 할 것
 
-1. **`daily.yml` 미커밋 변경분을 푸시한다.** dry_run 이 유튜브 시크릿 없이도
-   돌도록 사전 점검을 고친 것과, 실패 알림의 라벨 지정을 뺀 것 두 가지다.
-   푸시 전에는 dry_run 이 시크릿 누락으로 즉시 실패한다.
-2. **Actions → `daily-shorts-draft` → Run workflow → `dry_run` 체크, `count`는 2.**
+1. **Actions → `daily-shorts-draft` → Run workflow → `dry_run` 체크, `count`는 2.**
    여기서 Task 3 의 실제 Gemini 호출이 검증된다. 결과 mp4 는 아티팩트로 받는다.
-3. 그 다음 **Task 6 (`notify.py`)** 를 구현한다.
+   dry_run 은 유튜브 시크릿 없이 돌기 때문에 Task 1 전에도 실행할 수 있다.
+2. **Task 1 (GCP 인증)** 을 사람이 수행한다. 이게 끝나야 실제 업로드와
+   Task 6 의 실제 Issue 생성을 확인할 수 있다.
+3. **Task 7 통합 점검** — dry_run 해제하고 전체 실행.
+
+> `workflow_dispatch` 는 브라우저에서 눌러야 한다. 로컬에 `gh` CLI 가 없고
+> 토큰도 없어서 코드로는 트리거할 수 없다.
 
 ### 막혀 있는 것
 

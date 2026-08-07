@@ -72,7 +72,7 @@ src/
   script_gen.py               2) 대본 생성              (완료)
   tts.py                      3) 음성 합성              (완료)
   render.py                   4) 영상 렌더링            (완료)
-  notify.py                   6) 검수 이슈 생성          (미구현)
+  notify.py                   6) 검수 이슈 생성          (완료)
 scripts/
   get_refresh_token.py        로컬 1회 실행            (완료)
   check_auth.py               로컬 검증                (완료)
