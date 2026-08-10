@@ -175,10 +175,23 @@ def main() -> int:
     items = json.loads(SCRIPTS_JSON.read_text(encoding="utf-8"))
     posted = _load_posted()
 
-    todo = [i for i in items if i["id"] not in posted][:MAX_UPLOADS_PER_RUN]
-    skipped = len(items) - len(todo)
-    if skipped:
-        print(f"이미 업로드된 {skipped}건은 건너뜁니다.")
+    # 렌더가 실패한 건은 video_path 가 없다. render.py 는 부분 실패를 허용하므로
+    # 실제로 생기는 상황이다 (CLAUDE.md 6장).
+    # 거르지 않으면 두 가지가 터진다.
+    #   1) _upload_one 이 KeyError: 'video_path' 로 죽는다. 로그만 봐서는
+    #      렌더가 실패했다는 사실을 알 수 없다.
+    #   2) 더 나쁜 건, 그 항목이 MAX_UPLOADS_PER_RUN 슬롯을 차지해서
+    #      정상 렌더된 뒷순위 기사를 밀어낸다.
+    renderable = [i for i in items if i.get("video_path")]
+    unrendered = len(items) - len(renderable)
+    if unrendered:
+        print(f"렌더 결과가 없는 {unrendered}건은 건너뜁니다 (video_path 없음).")
+
+    already = sum(1 for i in renderable if i["id"] in posted)
+    if already:
+        print(f"이미 업로드된 {already}건은 건너뜁니다.")
+
+    todo = [i for i in renderable if i["id"] not in posted][:MAX_UPLOADS_PER_RUN]
     if not todo:
         print("업로드할 항목이 없습니다.")
         UPLOADED_JSON.write_text("[]\n", encoding="utf-8")

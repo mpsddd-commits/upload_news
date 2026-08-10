@@ -56,14 +56,28 @@ def _resolve_font(cfg: dict) -> pathlib.Path:
     if configured and pathlib.Path(configured).exists():
         return pathlib.Path(configured)
 
+    def _warn(path: pathlib.Path) -> pathlib.Path:
+        print(f"  [경고] 설정된 폰트가 없습니다: {configured}")
+        print(f"         대체 폰트를 씁니다: {path}")
+        return path
+
     for candidate in FONT_FALLBACKS:
         path = pathlib.Path(candidate)
         if path.exists():
-            if configured:
-                print(f"  [경고] 설정된 폰트가 없습니다: {configured}")
-                print(f"         대체 폰트를 씁니다: {path}")
-                print("         운영(ubuntu-latest)에서는 설정값이 그대로 쓰입니다.")
-            return path
+            return _warn(path) if configured else path
+
+    # 마지막 수단: 시스템 폰트 디렉터리를 뒤진다.
+    # 배포판이 폰트를 어디에 두는지는 패키지 버전마다 조금씩 다르다.
+    # 여기까지 와서 못 찾으면 자막이 통째로 두부가 되므로, 경로를 못 맞혔다고
+    # 렌더를 포기하기보다 실제로 깔린 한글 폰트를 찾아 쓰는 편이 낫다.
+    for root in ("/usr/share/fonts", "/usr/local/share/fonts", "C:/Windows/Fonts"):
+        base = pathlib.Path(root)
+        if not base.exists():
+            continue
+        for pattern in ("**/*Nanum*.tt[fc]", "**/*malgun*.tt[fc]", "**/*Gothic*.tt[fc]"):
+            found = sorted(base.glob(pattern))
+            if found:
+                return _warn(found[0])
 
     raise RuntimeError(
         "한글 폰트를 찾지 못했습니다. config.yml 의 render.font_path 를 확인하세요. "
