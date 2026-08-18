@@ -18,7 +18,10 @@ on:
       dry_run:
         description: '업로드 없이 렌더링까지만 (아티팩트로 확인)'
         type: boolean
-        default: false
+        # Task 1(GCP 인증) 전까지는 수동 실행의 기본을 dry_run 으로 둔다.
+        # 유튜브 시크릿이 없어 전체 실행은 어차피 사전 점검에서 막힌다.
+        # Task 7 통합 점검 때 false 로 되돌릴 것.
+        default: true
 
 permissions:
   contents: write   # state/posted.json 커밋용
