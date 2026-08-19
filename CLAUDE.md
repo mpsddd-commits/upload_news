@@ -188,7 +188,7 @@ YouTube Data API 기본 할당량은 프로젝트당 **하루 10,000유닛**.
 ### 대본 생성 비용
 
 기본값은 **Gemini 무료 티어**다 (`config.yml` 의 `script_gen.provider: gemini`).
-2.5 Flash 무료 한도는 10 RPM / 250 RPD 이고 이 파이프라인은 하루 5건이라 50배 여유가 있다.
+Flash 계열 무료 한도는 10 RPM / 250 RPD 이고 이 파이프라인은 하루 5건이라 50배 여유가 있다.
 단, 무료 티어의 입출력은 구글 제품 개선에 사용되고 한도는 예고 없이 줄어든다
 (2025-12-07에 50~80% 삭감된 전례가 있다). 어느 쪽도 공개 기사 요약이라 문제는 없지만,
 조용히 429로 죽는 날이 오면 provider를 바꾸면 된다.
@@ -236,6 +236,14 @@ Anthropic API에는 무료 티어가 없다. 선불 크레딧 종량제다.
 - **`text_align=MC` 파싱 오류** → flags 타입이라 값은 `+` 로 잇는다. `text_align=M+C`
 - **dry_run 인데 시크릿 누락으로 즉시 실패** → 사전 점검이 유튜브 시크릿을 무조건 요구하면,
   업로드하지도 않는 dry_run 이 시작조차 못 한다. 유튜브 검사는 `dry_run != true` 일 때만.
+- **Gemini 응답 JSON 이 문자열 중간에서 잘림 (`Unterminated string`)** → 3 계열은
+  **thinking 토큰이 `max_output_tokens` 에서 함께 차감**된다. 2048 으로 두면 사고에
+  1,900여 개를 쓰고 본문에 80개만 남아 `finish_reason=MAX_TOKENS` 로 끊긴다.
+  8192 로 올려 해결했다. 사고를 끄면 응답이 짧아져 `script_min_chars` 를 밑돈다.
+- **`gemini-2.5-flash` 가 404** → `"no longer available to new users"`. 신규 키에는
+  구세대 모델이 열리지 않는다. API 응답이 후속 모델을 직접 알려주므로 그대로 따르면 된다.
+  `config.yml` 의 `gemini_model` 한 줄만 바꾼다. `gemini-flash-latest` 같은 별칭은
+  쓰지 않는다 — 어느 날 조용히 바뀌어 대본 품질이 흔들린다.
 - **실패 알림 단계가 같이 실패** → `gh issue create --label` 에 리포에 없는 라벨을 지정하면
   gh 가 실패한다. 원인을 알려줄 단계가 죽으면 로그를 뒤져야 한다. 라벨을 붙이지 않는다.
 

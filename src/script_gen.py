@@ -106,7 +106,12 @@ def _generate_gemini(cfg: dict, user_prompt: str) -> str:
             # JSON 모드를 켜두면 펜스나 군더더기 없이 본문만 온다.
             # 그래도 파싱은 방어적으로 한다 (모델이 항상 지킨다는 보장은 없다).
             response_mime_type="application/json",
-            max_output_tokens=2048,
+            # Gemini 3 계열은 thinking 토큰이 이 상한에서 함께 차감된다.
+            # 2048 으로 두면 사고에 1900여 개를 쓰고 본문에 80개만 남아
+            # JSON 이 문자열 중간에서 잘린다 (finish_reason=MAX_TOKENS).
+            # 대본 자체는 400 토큰이면 충분하지만 사고 몫까지 얹어 넉넉히 잡는다.
+            # thinking 을 끄면 응답이 짧아져 script_min_chars 를 밑돌기 쉽다.
+            max_output_tokens=8192,
         ),
     )
     return response.text or ""

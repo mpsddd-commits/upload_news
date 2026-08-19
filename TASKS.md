@@ -14,7 +14,7 @@ Claude Code에게 한 번에 하나씩 지시한다. 예: **"TASKS.md의 Task 2�
 | 0 스캐폴딩 | **완료** | 수용 기준 2종 통과 |
 | 1 GCP 인증 | **미착수** | 사람이 콘솔에서 수행. 유튜브 업로드의 유일한 선행 조건 |
 | 2 `config.yml` + `collect.py` | **완료** | 수용 기준 통과 |
-| 3 `script_gen.py` | **구현 완료 / 실호출 미검증** | 파싱·검증·재시도는 검증됨. 실제 Gemini 호출은 아직 |
+| 3 `script_gen.py` | **완료** | 2026-08-19 실호출 검증. 모델 교체 + 토큰 상한 상향 후 2건 성공 |
 | 4 `tts.py` | **완료** | 수용 기준 통과 |
 | 5 `render.py` | **완료** | 수용 기준 + 한글 자막 육안 확인까지 통과 |
 | 6 `notify.py` | **구현 완료 / 실호출 미검증** | 본문·리포해석·오류경로는 검증됨. 실제 Issue 생성은 아직 |
@@ -163,7 +163,7 @@ print('통과', len(a))
 
 - 제공자는 `config.yml` 의 `script_gen.provider` 로 고른다. **기본값은 `gemini`** (무료 티어).
   (초안은 Anthropic 전용이었으나, 비용 0원으로 시작하되 언제든 갈아끼울 수 있게 바꿨다)
-  - `gemini`    — `from google import genai` / 모델 `gemini-2.5-flash` / `GEMINI_API_KEY`
+  - `gemini`    — `from google import genai` / 모델은 `config.yml` 의 `gemini_model` / `GEMINI_API_KEY`
   - `anthropic` — `from anthropic import Anthropic` / 모델 `claude-sonnet-5` / `ANTHROPIC_API_KEY`
 - **기사 요약문을 그대로 옮기지 말고 자기 문장으로 다시 쓰도록** 프롬프트에 명시.
   이건 저작권 요건이다. 생성 후 원문과의 유사도까지 검사하고, `script_gen.max_similarity`

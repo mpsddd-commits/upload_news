@@ -41,13 +41,17 @@ collect:
   request_backoff: 2.0    # 지수 백오프 기준 초
 
 script_gen:
-  # gemini   — 무료 티어 (2.5 Flash 기준 10 RPM / 250 RPD). 하루 5건이면 50배 여유.
+  # gemini   — 무료 티어 (Flash 계열 기준 10 RPM / 250 RPD). 하루 5건이면 50배 여유.
   #            무료 티어의 입출력은 구글 제품 개선에 사용된다. 공개 기사 요약이라 문제는 없다.
   # anthropic— 유료. 한 달 1,000~3,000원. 무료 티어 변동·품질 이슈가 없다.
   # 대본 품질이 아쉬우면 이 한 줄과 시크릿만 바꾸면 된다.
   provider: gemini          # gemini | anthropic
 
-  gemini_model: gemini-2.5-flash
+  # 2026-08-19: gemini-2.5-flash 는 신규 키에 404 를 준다.
+  #   "no longer available to new users. Please update to models/gemini-3.6-flash"
+  # API 가 직접 지목한 후속 모델로 교체했다. 3.7-flash 도 응답하지만
+  # 검증된 쪽을 고정한다 (gemini-flash-latest 같은 별칭은 어느 날 조용히 바뀐다).
+  gemini_model: gemini-3.6-flash
   anthropic_model: claude-sonnet-5   # 비용을 더 줄이려면 claude-haiku-4-5
 
   retries: 3                # 기사 1건당 최대 시도 횟수
