@@ -6,9 +6,12 @@ name: daily-shorts-draft
 # ─────────────────────────────────────────────────────────────
 
 on:
-  schedule:
-    # cron은 항상 UTC 기준입니다. 21:00 UTC = 익일 06:00 KST
-    - cron: '0 21 * * *'
+  # 2026-08-19: Task 1(GCP 인증)이 끝날 때까지 자동 실행을 꺼둔다.
+  # 유튜브 시크릿이 없어 매일 06시에 사전 점검에서 죽고 실패 이슈만 쌓인다.
+  # 인증이 끝나면 아래 두 줄의 주석을 풀 것.
+  # schedule:
+  #   # cron은 항상 UTC 기준입니다. 21:00 UTC = 익일 06:00 KST
+  #   - cron: '0 21 * * *'
   workflow_dispatch:
     inputs:
       count:
