@@ -1,1 +1,24 @@
-{}
+{
+  "20260818-001": {
+    "id": "20260818-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260818_0003753102",
+    "studio_url": "https://studio.youtube.com/video/zGbDk4ZD_cY/edit",
+    "title": "이재명 대통령 \"재건축 규제 완화, 집값 폭등으로 이어지면 안 돼\"",
+    "uploaded_at": "2026-08-20T10:07:48+00:00",
+    "video_id": "zGbDk4ZD_cY",
+    "watch_url": "https://www.youtube.com/watch?v=zGbDk4ZD_cY"
+  },
+  "20260818-002": {
+    "id": "20260818-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260818_0003752678",
+    "studio_url": "https://studio.youtube.com/video/RniYRggikQc/edit",
+    "title": "지방 미분양 아파트 5천 호 사들인다… LH 매입 공고 발표",
+    "uploaded_at": "2026-08-20T10:07:53+00:00",
+    "video_id": "RniYRggikQc",
+    "watch_url": "https://www.youtube.com/watch?v=RniYRggikQc"
+  }
+}
