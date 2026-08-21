@@ -42,5 +42,27 @@
     "uploaded_at": "2026-08-20T21:38:20+00:00",
     "video_id": "XZlO-_Tu82A",
     "watch_url": "https://www.youtube.com/watch?v=XZlO-_Tu82A"
+  },
+  "20260822-001": {
+    "id": "20260822-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260821_0003758230",
+    "studio_url": "https://studio.youtube.com/video/RBIqXSuuixs/edit",
+    "title": "고시원에 책상 빼고 욕조? 정부, 청년 반발에 개정안 재검토",
+    "uploaded_at": "2026-08-21T21:27:12+00:00",
+    "video_id": "RBIqXSuuixs",
+    "watch_url": "https://www.youtube.com/watch?v=RBIqXSuuixs"
+  },
+  "20260822-002": {
+    "id": "20260822-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/economy/12133514",
+    "studio_url": "https://studio.youtube.com/video/6f1O3V1GNzA/edit",
+    "title": "국제 유가 올라도 기름값 묶는다… 휘발유 1,784원 동결",
+    "uploaded_at": "2026-08-21T21:27:13+00:00",
+    "video_id": "6f1O3V1GNzA",
+    "watch_url": "https://www.youtube.com/watch?v=6f1O3V1GNzA"
   }
 }
