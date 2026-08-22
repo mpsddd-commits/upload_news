@@ -64,5 +64,27 @@
     "uploaded_at": "2026-08-21T21:27:13+00:00",
     "video_id": "6f1O3V1GNzA",
     "watch_url": "https://www.youtube.com/watch?v=6f1O3V1GNzA"
+  },
+  "20260823-001": {
+    "id": "20260823-001",
+    "privacy": "private",
+    "source_name": "연합뉴스",
+    "source_url": "https://www.yna.co.kr/view/AKR20260822044600017",
+    "studio_url": "https://studio.youtube.com/video/X3MYRiGA5K8/edit",
+    "title": "카카오가 물적분할 대신 인적분할을 선택한 진짜 이유",
+    "uploaded_at": "2026-08-22T21:32:42+00:00",
+    "video_id": "X3MYRiGA5K8",
+    "watch_url": "https://www.youtube.com/watch?v=X3MYRiGA5K8"
+  },
+  "20260823-002": {
+    "id": "20260823-002",
+    "privacy": "private",
+    "source_name": "연합뉴스",
+    "source_url": "https://www.yna.co.kr/view/AKR20260822025400008",
+    "studio_url": "https://studio.youtube.com/video/rouafVU9u9o/edit",
+    "title": "반도체주 반등에도 굳게 닫힌 지갑…코스피 회전율 연중 최저",
+    "uploaded_at": "2026-08-22T21:32:44+00:00",
+    "video_id": "rouafVU9u9o",
+    "watch_url": "https://www.youtube.com/watch?v=rouafVU9u9o"
   }
 }
