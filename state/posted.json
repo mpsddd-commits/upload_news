@@ -86,5 +86,27 @@
     "uploaded_at": "2026-08-22T21:32:44+00:00",
     "video_id": "rouafVU9u9o",
     "watch_url": "https://www.youtube.com/watch?v=rouafVU9u9o"
+  },
+  "20260824-001": {
+    "id": "20260824-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260823_0003758755",
+    "studio_url": "https://studio.youtube.com/video/CfjH02BgkTw/edit",
+    "title": "31일 지나면 전부 사라집니다! 고유가 피해 지원금 잔액 확인하세요",
+    "uploaded_at": "2026-08-23T21:31:50+00:00",
+    "video_id": "CfjH02BgkTw",
+    "watch_url": "https://www.youtube.com/watch?v=CfjH02BgkTw"
+  },
+  "20260824-002": {
+    "id": "20260824-002",
+    "privacy": "private",
+    "source_name": "연합뉴스",
+    "source_url": "https://www.yna.co.kr/view/AKR20260821175000002",
+    "studio_url": "https://studio.youtube.com/video/DA3FWati0kw/edit",
+    "title": "하나은행과 보증기관의 만남! 청년기업에 2천억 원 보증대출 지원",
+    "uploaded_at": "2026-08-23T21:31:52+00:00",
+    "video_id": "DA3FWati0kw",
+    "watch_url": "https://www.youtube.com/watch?v=DA3FWati0kw"
   }
 }
