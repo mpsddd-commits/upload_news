@@ -108,5 +108,27 @@
     "uploaded_at": "2026-08-23T21:31:52+00:00",
     "video_id": "DA3FWati0kw",
     "watch_url": "https://www.youtube.com/watch?v=DA3FWati0kw"
+  },
+  "20260825-001": {
+    "id": "20260825-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260824_0003759678",
+    "studio_url": "https://studio.youtube.com/video/dq3M8r3gZek/edit",
+    "title": "서울시민 63.9%, 용산공원 공공주택 공급 반대",
+    "uploaded_at": "2026-08-24T21:32:51+00:00",
+    "video_id": "dq3M8r3gZek",
+    "watch_url": "https://www.youtube.com/watch?v=dq3M8r3gZek"
+  },
+  "20260825-002": {
+    "id": "20260825-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260825_0003760784",
+    "studio_url": "https://studio.youtube.com/video/Np6yXQF3Scs/edit",
+    "title": "미국, 이란 겨냥한 '경제적 배제 작전' 선언…거래 국가도 제재 경고",
+    "uploaded_at": "2026-08-24T21:32:53+00:00",
+    "video_id": "Np6yXQF3Scs",
+    "watch_url": "https://www.youtube.com/watch?v=Np6yXQF3Scs"
   }
 }
