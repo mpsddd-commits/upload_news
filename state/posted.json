@@ -130,5 +130,27 @@
     "uploaded_at": "2026-08-24T21:32:53+00:00",
     "video_id": "Np6yXQF3Scs",
     "watch_url": "https://www.youtube.com/watch?v=Np6yXQF3Scs"
+  },
+  "20260826-001": {
+    "id": "20260826-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260825_0003761655",
+    "studio_url": "https://studio.youtube.com/video/TTwcmfNg3ig/edit",
+    "title": "2차 공공기관 지방 이전, 10~11월 윤곽 나온다",
+    "uploaded_at": "2026-08-25T21:31:14+00:00",
+    "video_id": "TTwcmfNg3ig",
+    "watch_url": "https://www.youtube.com/watch?v=TTwcmfNg3ig"
+  },
+  "20260826-002": {
+    "id": "20260826-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260825_0003762205",
+    "studio_url": "https://studio.youtube.com/video/JoYCh--ndgI/edit",
+    "title": "뉴홈 전용 모기지 대출 조건 확정! 최장 40년 만기에 금리는?",
+    "uploaded_at": "2026-08-25T21:31:17+00:00",
+    "video_id": "JoYCh--ndgI",
+    "watch_url": "https://www.youtube.com/watch?v=JoYCh--ndgI"
   }
 }
