@@ -152,5 +152,27 @@
     "uploaded_at": "2026-08-25T21:31:17+00:00",
     "video_id": "JoYCh--ndgI",
     "watch_url": "https://www.youtube.com/watch?v=JoYCh--ndgI"
+  },
+  "20260827-001": {
+    "id": "20260827-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260826_0003763810",
+    "studio_url": "https://studio.youtube.com/video/N6fqAFPFCO8/edit",
+    "title": "서울시 모아주택 초기 사업비 첫 지원, 조합당 최대 20억 융자",
+    "uploaded_at": "2026-08-27T00:32:28+00:00",
+    "video_id": "N6fqAFPFCO8",
+    "watch_url": "https://www.youtube.com/watch?v=N6fqAFPFCO8"
+  },
+  "20260827-002": {
+    "id": "20260827-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260826_0003763381",
+    "studio_url": "https://studio.youtube.com/video/3Ctb0TElt-w/edit",
+    "title": "부영그룹, 외국인 유학생 98명에게 장학금 4억 원 전달",
+    "uploaded_at": "2026-08-27T00:32:29+00:00",
+    "video_id": "3Ctb0TElt-w",
+    "watch_url": "https://www.youtube.com/watch?v=3Ctb0TElt-w"
   }
 }
