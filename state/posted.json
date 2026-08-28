@@ -174,5 +174,27 @@
     "uploaded_at": "2026-08-27T00:32:29+00:00",
     "video_id": "3Ctb0TElt-w",
     "watch_url": "https://www.youtube.com/watch?v=3Ctb0TElt-w"
+  },
+  "20260828-001": {
+    "id": "20260828-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260828_0003766836",
+    "studio_url": "https://studio.youtube.com/video/csiLQza82Cw/edit",
+    "title": "대방건설 '세이프 플랫폼', 5년 연속 굿디자인 상품 선정",
+    "uploaded_at": "2026-08-28T05:17:23+00:00",
+    "video_id": "csiLQza82Cw",
+    "watch_url": "https://www.youtube.com/watch?v=csiLQza82Cw"
+  },
+  "20260828-002": {
+    "id": "20260828-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260828_0003766861",
+    "studio_url": "https://studio.youtube.com/video/Hl9aTE3EtTs/edit",
+    "title": "오세훈 시장, 정비사업 권한 이관 추진에 '정치적 권한 약화 시도' 비판",
+    "uploaded_at": "2026-08-28T05:17:24+00:00",
+    "video_id": "Hl9aTE3EtTs",
+    "watch_url": "https://www.youtube.com/watch?v=Hl9aTE3EtTs"
   }
 }
