@@ -207,5 +207,27 @@
     "uploaded_at": "2026-08-29T03:07:11+00:00",
     "video_id": "-d09yIRUtBU",
     "watch_url": "https://www.youtube.com/watch?v=-d09yIRUtBU"
+  },
+  "20260830-001": {
+    "id": "20260830-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260828_0003767514",
+    "studio_url": "https://studio.youtube.com/video/c9sQceUBsSc/edit",
+    "title": "공정위 제재 수위 대폭 강화, '매우 중대' 판단 급증",
+    "uploaded_at": "2026-08-29T23:09:40+00:00",
+    "video_id": "c9sQceUBsSc",
+    "watch_url": "https://www.youtube.com/watch?v=c9sQceUBsSc"
+  },
+  "20260830-002": {
+    "id": "20260830-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/stock/12139613",
+    "studio_url": "https://studio.youtube.com/video/kA62UO3p9i8/edit",
+    "title": "롯데카드와 홈플러스, MBK 손에 달린 M&A 시장 향방",
+    "uploaded_at": "2026-08-29T23:09:42+00:00",
+    "video_id": "kA62UO3p9i8",
+    "watch_url": "https://www.youtube.com/watch?v=kA62UO3p9i8"
   }
 }
