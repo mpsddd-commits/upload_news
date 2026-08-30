@@ -229,5 +229,27 @@
     "uploaded_at": "2026-08-29T23:09:42+00:00",
     "video_id": "kA62UO3p9i8",
     "watch_url": "https://www.youtube.com/watch?v=kA62UO3p9i8"
+  },
+  "20260831-001": {
+    "id": "20260831-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260831_0003768678",
+    "studio_url": "https://studio.youtube.com/video/AZaU22SYi0A/edit",
+    "title": "7월 산업생산 보합 기록…소비 2.4% 감소·설비투자 7.5% 증가",
+    "uploaded_at": "2026-08-30T23:24:51+00:00",
+    "video_id": "AZaU22SYi0A",
+    "watch_url": "https://www.youtube.com/watch?v=AZaU22SYi0A"
+  },
+  "20260831-002": {
+    "id": "20260831-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260830_0003768220",
+    "studio_url": "https://studio.youtube.com/video/hOtIojBJk-0/edit",
+    "title": "롯데와 현대건설이 함께 짓는 1조 4천억 대 안양 재개발 사업!",
+    "uploaded_at": "2026-08-30T23:24:53+00:00",
+    "video_id": "hOtIojBJk-0",
+    "watch_url": "https://www.youtube.com/watch?v=hOtIojBJk-0"
   }
 }
