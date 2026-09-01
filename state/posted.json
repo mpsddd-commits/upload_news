@@ -251,5 +251,27 @@
     "uploaded_at": "2026-08-30T23:24:53+00:00",
     "video_id": "hOtIojBJk-0",
     "watch_url": "https://www.youtube.com/watch?v=hOtIojBJk-0"
+  },
+  "20260901-001": {
+    "id": "20260901-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260901_0003770729",
+    "studio_url": "https://studio.youtube.com/video/CDDpZMTwyPE/edit",
+    "title": "8월 수출 982억 달러 돌파… 반도체 3개월 연속 400억 달러 경신",
+    "uploaded_at": "2026-09-01T00:34:12+00:00",
+    "video_id": "CDDpZMTwyPE",
+    "watch_url": "https://www.youtube.com/watch?v=CDDpZMTwyPE"
+  },
+  "20260901-002": {
+    "id": "20260901-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260901_0003770617",
+    "studio_url": "https://studio.youtube.com/video/QwBOPccXE08/edit",
+    "title": "무역수지 347.5억 달러 기록! 19개월 연속 흑자 달성",
+    "uploaded_at": "2026-09-01T00:34:13+00:00",
+    "video_id": "QwBOPccXE08",
+    "watch_url": "https://www.youtube.com/watch?v=QwBOPccXE08"
   }
 }
