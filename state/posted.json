@@ -273,5 +273,27 @@
     "uploaded_at": "2026-09-01T00:34:13+00:00",
     "video_id": "QwBOPccXE08",
     "watch_url": "https://www.youtube.com/watch?v=QwBOPccXE08"
+  },
+  "20260902-001": {
+    "id": "20260902-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260901_0003771457",
+    "studio_url": "https://studio.youtube.com/video/akJ2qC_8ANQ/edit",
+    "title": "실거주 안 해도 종부세 12억 공제 유지…세제개편안 확정",
+    "uploaded_at": "2026-09-01T23:06:55+00:00",
+    "video_id": "akJ2qC_8ANQ",
+    "watch_url": "https://www.youtube.com/watch?v=akJ2qC_8ANQ"
+  },
+  "20260902-002": {
+    "id": "20260902-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260902_0003772365",
+    "studio_url": "https://studio.youtube.com/video/9PkqU2fVrfw/edit",
+    "title": "8월 소비자물가 다시 3%대로… 근원물가는 3년 3개월 만에 최고",
+    "uploaded_at": "2026-09-01T23:06:56+00:00",
+    "video_id": "9PkqU2fVrfw",
+    "watch_url": "https://www.youtube.com/watch?v=9PkqU2fVrfw"
   }
 }
