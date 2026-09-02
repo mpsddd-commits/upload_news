@@ -295,5 +295,27 @@
     "uploaded_at": "2026-09-01T23:06:56+00:00",
     "video_id": "9PkqU2fVrfw",
     "watch_url": "https://www.youtube.com/watch?v=9PkqU2fVrfw"
+  },
+  "20260903-001": {
+    "id": "20260903-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260902_0003773007",
+    "studio_url": "https://studio.youtube.com/video/wbbOrBMZ1xY/edit",
+    "title": "서울 전농동 일대 재개발 확정… 1800세대 대단지 들어선다",
+    "uploaded_at": "2026-09-02T23:05:05+00:00",
+    "video_id": "wbbOrBMZ1xY",
+    "watch_url": "https://www.youtube.com/watch?v=wbbOrBMZ1xY"
+  },
+  "20260903-002": {
+    "id": "20260903-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260902_0003773387",
+    "studio_url": "https://studio.youtube.com/video/WbSSFrOUgkE/edit",
+    "title": "신동아건설, 채정섭 신임 대표 선임하며 각자 대표 체제 전환",
+    "uploaded_at": "2026-09-02T23:05:06+00:00",
+    "video_id": "WbSSFrOUgkE",
+    "watch_url": "https://www.youtube.com/watch?v=WbSSFrOUgkE"
   }
 }
