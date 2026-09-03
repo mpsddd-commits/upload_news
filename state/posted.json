@@ -317,5 +317,27 @@
     "uploaded_at": "2026-09-02T23:05:06+00:00",
     "video_id": "WbSSFrOUgkE",
     "watch_url": "https://www.youtube.com/watch?v=WbSSFrOUgkE"
+  },
+  "20260904-001": {
+    "id": "20260904-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260903_0003775359",
+    "studio_url": "https://studio.youtube.com/video/I3V8EnCzI7w/edit",
+    "title": "삼성물산, 스웨덴 소형원자로 4기 사업 참여…유럽 첫 결실",
+    "uploaded_at": "2026-09-03T23:09:32+00:00",
+    "video_id": "I3V8EnCzI7w",
+    "watch_url": "https://www.youtube.com/watch?v=I3V8EnCzI7w"
+  },
+  "20260904-002": {
+    "id": "20260904-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260903_0003775779",
+    "studio_url": "https://studio.youtube.com/video/4uI-yDw2ay0/edit",
+    "title": "미국 연준 월러 이사, 9월 기준금리 동결 가능성 언급",
+    "uploaded_at": "2026-09-03T23:09:34+00:00",
+    "video_id": "4uI-yDw2ay0",
+    "watch_url": "https://www.youtube.com/watch?v=4uI-yDw2ay0"
   }
 }
