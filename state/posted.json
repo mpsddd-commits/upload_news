@@ -339,5 +339,27 @@
     "uploaded_at": "2026-09-03T23:09:34+00:00",
     "video_id": "4uI-yDw2ay0",
     "watch_url": "https://www.youtube.com/watch?v=4uI-yDw2ay0"
+  },
+  "20260905-001": {
+    "id": "20260905-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260904_0003777224",
+    "studio_url": "https://studio.youtube.com/video/XCRLl73I0x4/edit",
+    "title": "기후에너지환경부 인사 발표, 기후적응과장에 이승준 과장 전보",
+    "uploaded_at": "2026-09-04T22:58:18+00:00",
+    "video_id": "XCRLl73I0x4",
+    "watch_url": "https://www.youtube.com/watch?v=XCRLl73I0x4"
+  },
+  "20260905-002": {
+    "id": "20260905-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260904_0003776226",
+    "studio_url": "https://studio.youtube.com/video/MS-fz6WL17w/edit",
+    "title": "발전공기업 5사 하나로 합쳐진다… 내년 10월 '한국발전' 출범",
+    "uploaded_at": "2026-09-04T22:58:19+00:00",
+    "video_id": "MS-fz6WL17w",
+    "watch_url": "https://www.youtube.com/watch?v=MS-fz6WL17w"
   }
 }
