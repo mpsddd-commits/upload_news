@@ -372,5 +372,27 @@
     "uploaded_at": "2026-09-05T22:42:35+00:00",
     "video_id": "_Ga_ojaJ6Nc",
     "watch_url": "https://www.youtube.com/watch?v=_Ga_ojaJ6Nc"
+  },
+  "20260907-001": {
+    "id": "20260907-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260906_0003777947",
+    "studio_url": "https://studio.youtube.com/video/Kdhr9W8UJYM/edit",
+    "title": "AI 데이터센터 수요 급증에 GS건설이 선택한 모듈러 공법이란?",
+    "uploaded_at": "2026-09-06T22:53:06+00:00",
+    "video_id": "Kdhr9W8UJYM",
+    "watch_url": "https://www.youtube.com/watch?v=Kdhr9W8UJYM"
+  },
+  "20260907-002": {
+    "id": "20260907-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260906_0003777939",
+    "studio_url": "https://studio.youtube.com/video/eaGZF1HYlvY/edit",
+    "title": "롯데건설, 강남 도곡우성 재건축 확보…올해 누적 수주 4조 원 돌파",
+    "uploaded_at": "2026-09-06T22:53:08+00:00",
+    "video_id": "eaGZF1HYlvY",
+    "watch_url": "https://www.youtube.com/watch?v=eaGZF1HYlvY"
   }
 }
