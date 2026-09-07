@@ -394,5 +394,27 @@
     "uploaded_at": "2026-09-06T22:53:08+00:00",
     "video_id": "eaGZF1HYlvY",
     "watch_url": "https://www.youtube.com/watch?v=eaGZF1HYlvY"
+  },
+  "20260908-001": {
+    "id": "20260908-001",
+    "privacy": "private",
+    "source_name": "연합뉴스",
+    "source_url": "https://www.yna.co.kr/view/AKR20260908014500002",
+    "studio_url": "https://studio.youtube.com/video/ix6KfCZF0DQ/edit",
+    "title": "2분기 한국 경제 성장 지속, 명목 GDP 47년 만에 최고 기록",
+    "uploaded_at": "2026-09-07T23:20:55+00:00",
+    "video_id": "ix6KfCZF0DQ",
+    "watch_url": "https://www.youtube.com/watch?v=ix6KfCZF0DQ"
+  },
+  "20260908-002": {
+    "id": "20260908-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260907_0003779625",
+    "studio_url": "https://studio.youtube.com/video/e1MxbFav8LY/edit",
+    "title": "대전에서 열린 중견기업 일자리 박람회… 2000여 명 채용 기대",
+    "uploaded_at": "2026-09-07T23:20:57+00:00",
+    "video_id": "e1MxbFav8LY",
+    "watch_url": "https://www.youtube.com/watch?v=e1MxbFav8LY"
   }
 }
