@@ -416,5 +416,27 @@
     "uploaded_at": "2026-09-07T23:20:57+00:00",
     "video_id": "e1MxbFav8LY",
     "watch_url": "https://www.youtube.com/watch?v=e1MxbFav8LY"
+  },
+  "20260909-001": {
+    "id": "20260909-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260909_0003781728",
+    "studio_url": "https://studio.youtube.com/video/HnSKA6Ry420/edit",
+    "title": "8월 취업자 18만 4000명 증가… 5개월 만에 반등 성공",
+    "uploaded_at": "2026-09-08T23:22:25+00:00",
+    "video_id": "HnSKA6Ry420",
+    "watch_url": "https://www.youtube.com/watch?v=HnSKA6Ry420"
+  },
+  "20260909-002": {
+    "id": "20260909-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260908_0003781255",
+    "studio_url": "https://studio.youtube.com/video/XwFo2v_Oebo/edit",
+    "title": "서울 도심에 매입임대 2만 호 들어선다! LH 청년주거 대책 발표",
+    "uploaded_at": "2026-09-08T23:22:27+00:00",
+    "video_id": "XwFo2v_Oebo",
+    "watch_url": "https://www.youtube.com/watch?v=XwFo2v_Oebo"
   }
 }
