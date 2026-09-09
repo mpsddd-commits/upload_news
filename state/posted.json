@@ -438,5 +438,27 @@
     "uploaded_at": "2026-09-08T23:22:27+00:00",
     "video_id": "XwFo2v_Oebo",
     "watch_url": "https://www.youtube.com/watch?v=XwFo2v_Oebo"
+  },
+  "20260910-001": {
+    "id": "20260910-001",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/realestate/12148954",
+    "studio_url": "https://studio.youtube.com/video/jHUvxHae9fc/edit",
+    "title": "서울 생애 첫 내 집 마련 비중 역대 최고… 6년 만에 9천 건 넘었다",
+    "uploaded_at": "2026-09-09T23:08:43+00:00",
+    "video_id": "jHUvxHae9fc",
+    "watch_url": "https://www.youtube.com/watch?v=jHUvxHae9fc"
+  },
+  "20260910-002": {
+    "id": "20260910-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260909_0003782678",
+    "studio_url": "https://studio.youtube.com/video/LsWlQEIyoRk/edit",
+    "title": "한국의 선진 동물 방역 기술, 아시아·태평양 12개국에 전수",
+    "uploaded_at": "2026-09-09T23:08:44+00:00",
+    "video_id": "LsWlQEIyoRk",
+    "watch_url": "https://www.youtube.com/watch?v=LsWlQEIyoRk"
   }
 }
