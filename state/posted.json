@@ -460,5 +460,27 @@
     "uploaded_at": "2026-09-09T23:08:44+00:00",
     "video_id": "LsWlQEIyoRk",
     "watch_url": "https://www.youtube.com/watch?v=LsWlQEIyoRk"
+  },
+  "20260911-001": {
+    "id": "20260911-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260911_0003785076",
+    "studio_url": "https://studio.youtube.com/video/VOuaawNlKRA/edit",
+    "title": "국제유가 배럴당 100달러 돌파…중동 전쟁 장기화 우려 커졌다",
+    "uploaded_at": "2026-09-10T23:00:19+00:00",
+    "video_id": "VOuaawNlKRA",
+    "watch_url": "https://www.youtube.com/watch?v=VOuaawNlKRA"
+  },
+  "20260911-002": {
+    "id": "20260911-002",
+    "privacy": "private",
+    "source_name": "머니투데이",
+    "source_url": "https://www.mt.co.kr/living/2026/09/11/2026091014375766012",
+    "studio_url": "https://studio.youtube.com/video/_9_hnwfW6Rg/edit",
+    "title": "도산공원에 등장한 헬리녹스 웨어 첫 플래그십 스토어",
+    "uploaded_at": "2026-09-10T23:00:20+00:00",
+    "video_id": "_9_hnwfW6Rg",
+    "watch_url": "https://www.youtube.com/watch?v=_9_hnwfW6Rg"
   }
 }
