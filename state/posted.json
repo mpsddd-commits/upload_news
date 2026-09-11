@@ -482,5 +482,27 @@
     "uploaded_at": "2026-09-10T23:00:20+00:00",
     "video_id": "_9_hnwfW6Rg",
     "watch_url": "https://www.youtube.com/watch?v=_9_hnwfW6Rg"
+  },
+  "20260912-001": {
+    "id": "20260912-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260911_0003786067",
+    "studio_url": "https://studio.youtube.com/video/e9NxvxmKU2A/edit",
+    "title": "해외 개발사업 확대를 위해 손잡은 디벨로퍼와 해외건설업계",
+    "uploaded_at": "2026-09-11T23:04:06+00:00",
+    "video_id": "e9NxvxmKU2A",
+    "watch_url": "https://www.youtube.com/watch?v=e9NxvxmKU2A"
+  },
+  "20260912-002": {
+    "id": "20260912-002",
+    "privacy": "private",
+    "source_name": "머니투데이",
+    "source_url": "https://www.mt.co.kr/tech/2026/09/12/2026091114004668396",
+    "studio_url": "https://studio.youtube.com/video/71LjVvwHLZ4/edit",
+    "title": "아이폰18 프로 사전예약 시작! 통신사별 혜택 총정리",
+    "uploaded_at": "2026-09-11T23:04:07+00:00",
+    "video_id": "71LjVvwHLZ4",
+    "watch_url": "https://www.youtube.com/watch?v=71LjVvwHLZ4"
   }
 }
