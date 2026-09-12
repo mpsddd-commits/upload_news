@@ -504,5 +504,27 @@
     "uploaded_at": "2026-09-11T23:04:07+00:00",
     "video_id": "71LjVvwHLZ4",
     "watch_url": "https://www.youtube.com/watch?v=71LjVvwHLZ4"
+  },
+  "20260913-001": {
+    "id": "20260913-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260912_0003786729",
+    "studio_url": "https://studio.youtube.com/video/bPeDrDYQdR4/edit",
+    "title": "국내 주유소 기름값 17주 연속 하락! 서울은 1900원대 유지",
+    "uploaded_at": "2026-09-12T23:01:11+00:00",
+    "video_id": "bPeDrDYQdR4",
+    "watch_url": "https://www.youtube.com/watch?v=bPeDrDYQdR4"
+  },
+  "20260913-002": {
+    "id": "20260913-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/stock/12151219",
+    "studio_url": "https://studio.youtube.com/video/bU6J58i-tr0/edit",
+    "title": "대장주로 쏠리는 투자자 관심, 검색 순위 1·2위는 어디?",
+    "uploaded_at": "2026-09-12T23:01:12+00:00",
+    "video_id": "bU6J58i-tr0",
+    "watch_url": "https://www.youtube.com/watch?v=bU6J58i-tr0"
   }
 }
