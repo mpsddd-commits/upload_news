@@ -526,5 +526,27 @@
     "uploaded_at": "2026-09-12T23:01:12+00:00",
     "video_id": "bU6J58i-tr0",
     "watch_url": "https://www.youtube.com/watch?v=bU6J58i-tr0"
+  },
+  "20260914-001": {
+    "id": "20260914-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260913_0003787142",
+    "studio_url": "https://studio.youtube.com/video/ZiclLtYjYWM/edit",
+    "title": "여의도 목화아파트 재건축, 삼성물산 5122억원에 수주",
+    "uploaded_at": "2026-09-13T23:05:00+00:00",
+    "video_id": "ZiclLtYjYWM",
+    "watch_url": "https://www.youtube.com/watch?v=ZiclLtYjYWM"
+  },
+  "20260914-002": {
+    "id": "20260914-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260913_0003787483",
+    "studio_url": "https://studio.youtube.com/video/Zsu_tNGwFVI/edit",
+    "title": "이형일 부총리 후보자 \"법인세 인하 검토 안 해... 지방 주도 성장 추진\"",
+    "uploaded_at": "2026-09-13T23:05:02+00:00",
+    "video_id": "Zsu_tNGwFVI",
+    "watch_url": "https://www.youtube.com/watch?v=Zsu_tNGwFVI"
   }
 }
