@@ -548,5 +548,27 @@
     "uploaded_at": "2026-09-13T23:05:02+00:00",
     "video_id": "Zsu_tNGwFVI",
     "watch_url": "https://www.youtube.com/watch?v=Zsu_tNGwFVI"
+  },
+  "20260915-001": {
+    "id": "20260915-001",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/economy/12152718",
+    "studio_url": "https://studio.youtube.com/video/Z9lVVUsr0Tw/edit",
+    "title": "사우디 송유관 셧다운…브렌트유 배럴당 105달러대 상승",
+    "uploaded_at": "2026-09-14T23:51:05+00:00",
+    "video_id": "Z9lVVUsr0Tw",
+    "watch_url": "https://www.youtube.com/watch?v=Z9lVVUsr0Tw"
+  },
+  "20260915-002": {
+    "id": "20260915-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260914_0003789288",
+    "studio_url": "https://studio.youtube.com/video/oJKjY7HZwXI/edit",
+    "title": "미 국채금리 5% 뚫었다… 유가 상승에 연준 금리 인상 압박까지",
+    "uploaded_at": "2026-09-14T23:51:07+00:00",
+    "video_id": "oJKjY7HZwXI",
+    "watch_url": "https://www.youtube.com/watch?v=oJKjY7HZwXI"
   }
 }
