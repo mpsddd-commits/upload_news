@@ -570,5 +570,27 @@
     "uploaded_at": "2026-09-14T23:51:07+00:00",
     "video_id": "oJKjY7HZwXI",
     "watch_url": "https://www.youtube.com/watch?v=oJKjY7HZwXI"
+  },
+  "20260916-001": {
+    "id": "20260916-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260915_0003790751",
+    "studio_url": "https://studio.youtube.com/video/B6EhWXqXH4E/edit",
+    "title": "도쿄 핵심 상권 빈 점포 완전 소진…긴자 임대료 역대 최고 경신",
+    "uploaded_at": "2026-09-15T23:29:09+00:00",
+    "video_id": "B6EhWXqXH4E",
+    "watch_url": "https://www.youtube.com/watch?v=B6EhWXqXH4E"
+  },
+  "20260916-002": {
+    "id": "20260916-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260915_0003789397",
+    "studio_url": "https://studio.youtube.com/video/tFnQxTtZBwk/edit",
+    "title": "서울 8월 집값 상승세 둔화…강남·서초 하락, 중위가격은 8억 첫 돌파",
+    "uploaded_at": "2026-09-15T23:29:11+00:00",
+    "video_id": "tFnQxTtZBwk",
+    "watch_url": "https://www.youtube.com/watch?v=tFnQxTtZBwk"
   }
 }
