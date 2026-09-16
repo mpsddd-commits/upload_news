@@ -592,5 +592,27 @@
     "uploaded_at": "2026-09-15T23:29:11+00:00",
     "video_id": "tFnQxTtZBwk",
     "watch_url": "https://www.youtube.com/watch?v=tFnQxTtZBwk"
+  },
+  "20260917-001": {
+    "id": "20260917-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260917_0003792867",
+    "studio_url": "https://studio.youtube.com/video/tx1hd2cU3dM/edit",
+    "title": "미 연준 기준금리 0.25%p 인상… 3년 2개월 만의 금리 올리기",
+    "uploaded_at": "2026-09-16T23:43:01+00:00",
+    "video_id": "tx1hd2cU3dM",
+    "watch_url": "https://www.youtube.com/watch?v=tx1hd2cU3dM"
+  },
+  "20260917-002": {
+    "id": "20260917-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260917_0003792873",
+    "studio_url": "https://studio.youtube.com/video/0aCkSBImpbk/edit",
+    "title": "연준의 3년 2개월 만 금리 인상, 백악관이 강하게 반발한 이유",
+    "uploaded_at": "2026-09-16T23:43:03+00:00",
+    "video_id": "0aCkSBImpbk",
+    "watch_url": "https://www.youtube.com/watch?v=0aCkSBImpbk"
   }
 }
