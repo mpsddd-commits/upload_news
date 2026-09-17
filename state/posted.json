@@ -614,5 +614,27 @@
     "uploaded_at": "2026-09-16T23:43:03+00:00",
     "video_id": "0aCkSBImpbk",
     "watch_url": "https://www.youtube.com/watch?v=0aCkSBImpbk"
+  },
+  "20260918-001": {
+    "id": "20260918-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260917_0003794448",
+    "studio_url": "https://studio.youtube.com/video/jLnVtmozUlg/edit",
+    "title": "토지거래허가구역 실거주 의무 유예 1년 더 연장됩니다",
+    "uploaded_at": "2026-09-17T23:34:18+00:00",
+    "video_id": "jLnVtmozUlg",
+    "watch_url": "https://www.youtube.com/watch?v=jLnVtmozUlg"
+  },
+  "20260918-002": {
+    "id": "20260918-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260917_0003794342",
+    "studio_url": "https://studio.youtube.com/video/OekmqwLuXuQ/edit",
+    "title": "정부 LH 분사 추진에 노조 총파업 예고... 주택 공급 영향받나",
+    "uploaded_at": "2026-09-17T23:34:19+00:00",
+    "video_id": "OekmqwLuXuQ",
+    "watch_url": "https://www.youtube.com/watch?v=OekmqwLuXuQ"
   }
 }
