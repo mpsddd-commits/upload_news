@@ -636,5 +636,27 @@
     "uploaded_at": "2026-09-17T23:34:19+00:00",
     "video_id": "OekmqwLuXuQ",
     "watch_url": "https://www.youtube.com/watch?v=OekmqwLuXuQ"
+  },
+  "20260919-001": {
+    "id": "20260919-001",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/realestate/12156817",
+    "studio_url": "https://studio.youtube.com/video/3eMK1sf8Nt4/edit",
+    "title": "금호건설, 3,910억 규모 송도 세브란스병원 공사 따냈다",
+    "uploaded_at": "2026-09-18T23:13:46+00:00",
+    "video_id": "3eMK1sf8Nt4",
+    "watch_url": "https://www.youtube.com/watch?v=3eMK1sf8Nt4"
+  },
+  "20260919-002": {
+    "id": "20260919-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260918_0003796040",
+    "studio_url": "https://studio.youtube.com/video/Ql_Ii6CLeLM/edit",
+    "title": "코스타리카 DEPA 공식 합류, 디지털 무역 영토 더 넓어진다",
+    "uploaded_at": "2026-09-18T23:13:48+00:00",
+    "video_id": "Ql_Ii6CLeLM",
+    "watch_url": "https://www.youtube.com/watch?v=Ql_Ii6CLeLM"
   }
 }
