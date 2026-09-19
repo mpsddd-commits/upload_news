@@ -658,5 +658,27 @@
     "uploaded_at": "2026-09-18T23:13:48+00:00",
     "video_id": "Ql_Ii6CLeLM",
     "watch_url": "https://www.youtube.com/watch?v=Ql_Ii6CLeLM"
+  },
+  "20260920-001": {
+    "id": "20260920-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260919_0003796437",
+    "studio_url": "https://studio.youtube.com/video/-eBlRskGfV4/edit",
+    "title": "추석·가을 여행철 맞춤 혜택! 농촌관광 주간 확대",
+    "uploaded_at": "2026-09-19T22:44:58+00:00",
+    "video_id": "-eBlRskGfV4",
+    "watch_url": "https://www.youtube.com/watch?v=-eBlRskGfV4"
+  },
+  "20260920-002": {
+    "id": "20260920-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/realestate/12157259",
+    "studio_url": "https://studio.youtube.com/video/X1RPEs8DYow/edit",
+    "title": "삼성전자 5억 사내대출에 동탄·영통 집값 오름세",
+    "uploaded_at": "2026-09-19T22:45:00+00:00",
+    "video_id": "X1RPEs8DYow",
+    "watch_url": "https://www.youtube.com/watch?v=X1RPEs8DYow"
   }
 }
