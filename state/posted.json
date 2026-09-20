@@ -680,5 +680,27 @@
     "uploaded_at": "2026-09-19T22:45:00+00:00",
     "video_id": "X1RPEs8DYow",
     "watch_url": "https://www.youtube.com/watch?v=X1RPEs8DYow"
+  },
+  "20260921-001": {
+    "id": "20260921-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260920_0003796916",
+    "studio_url": "https://studio.youtube.com/video/qeX_u05YtK8/edit",
+    "title": "현대건설, 올해 첫 도시정비 수주 10조 원 돌파!",
+    "uploaded_at": "2026-09-20T23:11:26+00:00",
+    "video_id": "qeX_u05YtK8",
+    "watch_url": "https://www.youtube.com/watch?v=qeX_u05YtK8"
+  },
+  "20260921-002": {
+    "id": "20260921-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260920_0003796937",
+    "studio_url": "https://studio.youtube.com/video/zt3_l6TEee8/edit",
+    "title": "호반건설, 창동상아1차·중화역 수주로 '1조 클럽' 달성",
+    "uploaded_at": "2026-09-20T23:11:27+00:00",
+    "video_id": "zt3_l6TEee8",
+    "watch_url": "https://www.youtube.com/watch?v=zt3_l6TEee8"
   }
 }
