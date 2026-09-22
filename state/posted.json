@@ -702,5 +702,27 @@
     "uploaded_at": "2026-09-20T23:11:27+00:00",
     "video_id": "zt3_l6TEee8",
     "watch_url": "https://www.youtube.com/watch?v=zt3_l6TEee8"
+  },
+  "20260922-001": {
+    "id": "20260922-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260922_0003799334",
+    "studio_url": "https://studio.youtube.com/video/MgbOhdEp_4I/edit",
+    "title": "2030년까지 공적주택 119만 호 공급, 수도권에 92만 호 배정",
+    "uploaded_at": "2026-09-22T00:01:19+00:00",
+    "video_id": "MgbOhdEp_4I",
+    "watch_url": "https://www.youtube.com/watch?v=MgbOhdEp_4I"
+  },
+  "20260922-002": {
+    "id": "20260922-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260921_0003798224",
+    "studio_url": "https://studio.youtube.com/video/AYHXRylHpEI/edit",
+    "title": "메가특구 주52시간 예외 적용 논의, 노사정 사회적 대화 시작",
+    "uploaded_at": "2026-09-22T00:01:21+00:00",
+    "video_id": "AYHXRylHpEI",
+    "watch_url": "https://www.youtube.com/watch?v=AYHXRylHpEI"
   }
 }
