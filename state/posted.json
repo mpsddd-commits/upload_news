@@ -746,5 +746,27 @@
     "uploaded_at": "2026-09-22T23:33:06+00:00",
     "video_id": "JPTZIRiTGDg",
     "watch_url": "https://www.youtube.com/watch?v=JPTZIRiTGDg"
+  },
+  "20260924-001": {
+    "id": "20260924-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260923_0003801543",
+    "studio_url": "https://studio.youtube.com/video/hzlmug4fWlY/edit",
+    "title": "멕시코 진출 한국 기업 세금 애로 해결 위해 양국 국세청장 첫 만남",
+    "uploaded_at": "2026-09-23T23:28:37+00:00",
+    "video_id": "hzlmug4fWlY",
+    "watch_url": "https://www.youtube.com/watch?v=hzlmug4fWlY"
+  },
+  "20260924-002": {
+    "id": "20260924-002",
+    "privacy": "private",
+    "source_name": "머니투데이",
+    "source_url": "https://www.mt.co.kr/politics/2026/09/24/2026092407595797455",
+    "studio_url": "https://studio.youtube.com/video/R7-SkZ3N5IA/edit",
+    "title": "농지 투기 전수조사 강행…불법 방치 시 강제 매각",
+    "uploaded_at": "2026-09-23T23:28:38+00:00",
+    "video_id": "R7-SkZ3N5IA",
+    "watch_url": "https://www.youtube.com/watch?v=R7-SkZ3N5IA"
   }
 }
