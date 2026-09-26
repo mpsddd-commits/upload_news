@@ -779,5 +779,27 @@
     "uploaded_at": "2026-09-24T23:55:19+00:00",
     "video_id": "qvqtT-ntHO4",
     "watch_url": "https://www.youtube.com/watch?v=qvqtT-ntHO4"
+  },
+  "20260926-001": {
+    "id": "20260926-001",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/realestate/12161537",
+    "studio_url": "https://studio.youtube.com/video/0V5bXnkNnLY/edit",
+    "title": "집값 비싼 동네는 청소년 자살률 낮다? 주거 환경과 청소년 자살률의 상관관계",
+    "uploaded_at": "2026-09-26T00:01:31+00:00",
+    "video_id": "0V5bXnkNnLY",
+    "watch_url": "https://www.youtube.com/watch?v=0V5bXnkNnLY"
+  },
+  "20260926-002": {
+    "id": "20260926-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260923_0003802093",
+    "studio_url": "https://studio.youtube.com/video/92ynatCY7rM/edit",
+    "title": "9월 마지막 주 청약 일정… 전국 3천6백여 가구 분양",
+    "uploaded_at": "2026-09-26T00:01:33+00:00",
+    "video_id": "92ynatCY7rM",
+    "watch_url": "https://www.youtube.com/watch?v=92ynatCY7rM"
   }
 }
