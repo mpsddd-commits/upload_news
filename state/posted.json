@@ -823,5 +823,27 @@
     "uploaded_at": "2026-09-26T23:26:01+00:00",
     "video_id": "KPYi1ZM-iRs",
     "watch_url": "https://www.youtube.com/watch?v=KPYi1ZM-iRs"
+  },
+  "20260928-001": {
+    "id": "20260928-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260924_0003802826",
+    "studio_url": "https://studio.youtube.com/video/fudtXTFfRFs/edit",
+    "title": "서초 서리풀 1지구 1만 8천 호 공급, 내년 3월 지구계획 승인 추진",
+    "uploaded_at": "2026-09-27T23:43:41+00:00",
+    "video_id": "fudtXTFfRFs",
+    "watch_url": "https://www.youtube.com/watch?v=fudtXTFfRFs"
+  },
+  "20260928-002": {
+    "id": "20260928-002",
+    "privacy": "private",
+    "source_name": "머니투데이",
+    "source_url": "https://www.mt.co.kr/stock/2026/09/28/2026092807554769160",
+    "studio_url": "https://studio.youtube.com/video/2G8w90t-xxQ/edit",
+    "title": "현대백화점 3분기 실적 전망 하향, 목표주가도 조정됐습니다",
+    "uploaded_at": "2026-09-27T23:43:43+00:00",
+    "video_id": "2G8w90t-xxQ",
+    "watch_url": "https://www.youtube.com/watch?v=2G8w90t-xxQ"
   }
 }
