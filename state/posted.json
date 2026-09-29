@@ -845,5 +845,27 @@
     "uploaded_at": "2026-09-27T23:43:43+00:00",
     "video_id": "2G8w90t-xxQ",
     "watch_url": "https://www.youtube.com/watch?v=2G8w90t-xxQ"
+  },
+  "20260929-001": {
+    "id": "20260929-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260928_0003805965",
+    "studio_url": "https://studio.youtube.com/video/I4WXWgQ5ELY/edit",
+    "title": "농림축산식품부 주요 과장급 인사 발표 소식",
+    "uploaded_at": "2026-09-29T00:53:07+00:00",
+    "video_id": "I4WXWgQ5ELY",
+    "watch_url": "https://www.youtube.com/watch?v=I4WXWgQ5ELY"
+  },
+  "20260929-002": {
+    "id": "20260929-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260929_0003806412",
+    "studio_url": "https://studio.youtube.com/video/uQ2cKk7eogA/edit",
+    "title": "8686억 규모 용인 반도체 산단 공사, 대우건설 컨소시엄이 땄다",
+    "uploaded_at": "2026-09-29T00:53:08+00:00",
+    "video_id": "uQ2cKk7eogA",
+    "watch_url": "https://www.youtube.com/watch?v=uQ2cKk7eogA"
   }
 }
