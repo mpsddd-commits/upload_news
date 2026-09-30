@@ -867,5 +867,27 @@
     "uploaded_at": "2026-09-29T00:53:08+00:00",
     "video_id": "uQ2cKk7eogA",
     "watch_url": "https://www.youtube.com/watch?v=uQ2cKk7eogA"
+  },
+  "20260930-001": {
+    "id": "20260930-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20260930_0003807976",
+    "studio_url": "https://studio.youtube.com/video/c1M8RzPuxP0/edit",
+    "title": "8월 생산·소비·투자 트리플 감소…산업활동 동향 발표",
+    "uploaded_at": "2026-09-30T00:14:57+00:00",
+    "video_id": "c1M8RzPuxP0",
+    "watch_url": "https://www.youtube.com/watch?v=c1M8RzPuxP0"
+  },
+  "20260930-002": {
+    "id": "20260930-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/economy/12164376",
+    "studio_url": "https://studio.youtube.com/video/AhO14IITFEc/edit",
+    "title": "올해 세금 예상보다 훨씬 많이 걷힌다… 국세수입 478.6조 원 전망",
+    "uploaded_at": "2026-09-30T00:14:59+00:00",
+    "video_id": "AhO14IITFEc",
+    "watch_url": "https://www.youtube.com/watch?v=AhO14IITFEc"
   }
 }
