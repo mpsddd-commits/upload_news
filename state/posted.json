@@ -911,5 +911,16 @@
     "uploaded_at": "2026-10-03T00:13:56+00:00",
     "video_id": "YUhsNGHS3KA",
     "watch_url": "https://www.youtube.com/watch?v=YUhsNGHS3KA"
+  },
+  "20261004-001": {
+    "id": "20261004-001",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/economy/12167805",
+    "studio_url": "https://studio.youtube.com/video/LXBRKHOa7GQ/edit",
+    "title": "현대캐피탈, AI 해킹 공격에 대출 모집인 정보 유출",
+    "uploaded_at": "2026-10-03T23:42:03+00:00",
+    "video_id": "LXBRKHOa7GQ",
+    "watch_url": "https://www.youtube.com/watch?v=LXBRKHOa7GQ"
   }
 }
