@@ -922,5 +922,16 @@
     "uploaded_at": "2026-10-03T23:42:03+00:00",
     "video_id": "LXBRKHOa7GQ",
     "watch_url": "https://www.youtube.com/watch?v=LXBRKHOa7GQ"
+  },
+  "20261005-001": {
+    "id": "20261005-001",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/economy/12168012",
+    "studio_url": "https://studio.youtube.com/video/NGvcith8W0Q/edit",
+    "title": "해킹 사고 2금융권 확산, 이억원 금융위원장 경각심 당부",
+    "uploaded_at": "2026-10-04T23:52:59+00:00",
+    "video_id": "NGvcith8W0Q",
+    "watch_url": "https://www.youtube.com/watch?v=NGvcith8W0Q"
   }
 }
