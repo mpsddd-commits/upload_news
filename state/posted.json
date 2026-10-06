@@ -933,5 +933,16 @@
     "uploaded_at": "2026-10-04T23:52:59+00:00",
     "video_id": "NGvcith8W0Q",
     "watch_url": "https://www.youtube.com/watch?v=NGvcith8W0Q"
+  },
+  "20261006-001": {
+    "id": "20261006-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20261006_0003814946",
+    "studio_url": "https://studio.youtube.com/video/pc-NNRk1lv0/edit",
+    "title": "싱가포르 도시철도 현장서 안전성 인정받은 대우건설",
+    "uploaded_at": "2026-10-06T01:49:18+00:00",
+    "video_id": "pc-NNRk1lv0",
+    "watch_url": "https://www.youtube.com/watch?v=pc-NNRk1lv0"
   }
 }
