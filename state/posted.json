@@ -955,5 +955,27 @@
     "uploaded_at": "2026-10-08T00:46:22+00:00",
     "video_id": "iEMDncDG1AE",
     "watch_url": "https://www.youtube.com/watch?v=iEMDncDG1AE"
+  },
+  "20261009-001": {
+    "id": "20261009-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20261008_0003819371",
+    "studio_url": "https://studio.youtube.com/video/JpzJdB5kv0A/edit",
+    "title": "지방 주택 시장 살리기! 주건협과 지역은행·보증기관 손잡았다",
+    "uploaded_at": "2026-10-09T01:09:38+00:00",
+    "video_id": "JpzJdB5kv0A",
+    "watch_url": "https://www.youtube.com/watch?v=JpzJdB5kv0A"
+  },
+  "20261009-002": {
+    "id": "20261009-002",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20261008_0003819092",
+    "studio_url": "https://studio.youtube.com/video/dgkitOszqKo/edit",
+    "title": "국내 최초 그린암모니아 발전 계약! 무탄소 전력 시대 열린다",
+    "uploaded_at": "2026-10-09T01:09:39+00:00",
+    "video_id": "dgkitOszqKo",
+    "watch_url": "https://www.youtube.com/watch?v=dgkitOszqKo"
   }
 }
