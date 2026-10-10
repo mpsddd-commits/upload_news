@@ -977,5 +977,27 @@
     "uploaded_at": "2026-10-09T01:09:39+00:00",
     "video_id": "dgkitOszqKo",
     "watch_url": "https://www.youtube.com/watch?v=dgkitOszqKo"
+  },
+  "20261010-001": {
+    "id": "20261010-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20261010_0003820396",
+    "studio_url": "https://studio.youtube.com/video/Mf1Et6OlH6c/edit",
+    "title": "미국·러시아 경유 합의… 트럼프, 푸틴과 디젤 공급 발표",
+    "uploaded_at": "2026-10-10T00:39:54+00:00",
+    "video_id": "Mf1Et6OlH6c",
+    "watch_url": "https://www.youtube.com/watch?v=Mf1Et6OlH6c"
+  },
+  "20261010-002": {
+    "id": "20261010-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/realestate/12172253",
+    "studio_url": "https://studio.youtube.com/video/ajYFEyCe0vs/edit",
+    "title": "숙대입구역 재개발 조경, IPARK현대산업개발과 삼성물산 리조트 맞손",
+    "uploaded_at": "2026-10-10T00:39:57+00:00",
+    "video_id": "ajYFEyCe0vs",
+    "watch_url": "https://www.youtube.com/watch?v=ajYFEyCe0vs"
   }
 }
