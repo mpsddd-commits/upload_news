@@ -999,5 +999,27 @@
     "uploaded_at": "2026-10-10T00:39:57+00:00",
     "video_id": "ajYFEyCe0vs",
     "watch_url": "https://www.youtube.com/watch?v=ajYFEyCe0vs"
+  },
+  "20261011-001": {
+    "id": "20261011-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20261010_0003820452",
+    "studio_url": "https://studio.youtube.com/video/6N90FUW1SZA/edit",
+    "title": "부천 발전소 건설 현장서 크레인 사고…노동당국 조사 착수",
+    "uploaded_at": "2026-10-11T00:10:55+00:00",
+    "video_id": "6N90FUW1SZA",
+    "watch_url": "https://www.youtube.com/watch?v=6N90FUW1SZA"
+  },
+  "20261011-002": {
+    "id": "20261011-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/economy/12172679",
+    "studio_url": "https://studio.youtube.com/video/VZdc_YpvKTw/edit",
+    "title": "한국 금융권 노린 AI 해킹 도구 아르텍스, 개발 전격 중단",
+    "uploaded_at": "2026-10-11T00:10:57+00:00",
+    "video_id": "VZdc_YpvKTw",
+    "watch_url": "https://www.youtube.com/watch?v=VZdc_YpvKTw"
   }
 }
