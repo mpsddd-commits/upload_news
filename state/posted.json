@@ -1021,5 +1021,27 @@
     "uploaded_at": "2026-10-11T00:10:57+00:00",
     "video_id": "VZdc_YpvKTw",
     "watch_url": "https://www.youtube.com/watch?v=VZdc_YpvKTw"
+  },
+  "20261012-001": {
+    "id": "20261012-001",
+    "privacy": "private",
+    "source_name": "뉴시스",
+    "source_url": "https://www.newsis.com/view/NISX20261012_0003821324",
+    "studio_url": "https://studio.youtube.com/video/FbOQyypaYsc/edit",
+    "title": "서울 아파트 계약 취소 급증…5년 만에 두 배 이상 늘었다",
+    "uploaded_at": "2026-10-12T00:24:28+00:00",
+    "video_id": "FbOQyypaYsc",
+    "watch_url": "https://www.youtube.com/watch?v=FbOQyypaYsc"
+  },
+  "20261012-002": {
+    "id": "20261012-002",
+    "privacy": "private",
+    "source_name": "매일경제",
+    "source_url": "https://www.mk.co.kr/news/economy/12173257",
+    "studio_url": "https://studio.youtube.com/video/FnW5ogUbA-M/edit",
+    "title": "한국은행에 들어온 위조지폐 4억 7천만 원…1년 만에 100배 폭증",
+    "uploaded_at": "2026-10-12T00:24:30+00:00",
+    "video_id": "FnW5ogUbA-M",
+    "watch_url": "https://www.youtube.com/watch?v=FnW5ogUbA-M"
   }
 }
